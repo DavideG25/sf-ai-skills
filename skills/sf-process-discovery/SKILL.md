@@ -11,23 +11,19 @@ description: >
   Works for developers AND functional users.
 context: fork
 allowed-tools: Task, Read, Write, Grep, Glob, Bash
-input: |
-  proj=$(cat sfdx-project.json 2>/dev/null | head -5)
-  map_ts=$(stat -c %Y .claude/sf-execution-map.md 2>/dev/null || echo "0")
-  last_commit=$(git log -1 --format="%ct" -- "*/triggers/*" "*/flows/*" "*/validationRules/*" 2>/dev/null || echo "0")
-  echo "=== PROJECT ===" && echo "$proj"
-  echo "=== MAP_TIMESTAMP ===$map_ts"
-  echo "=== LAST_RELEVANT_COMMIT ===$last_commit"
 ---
 
 # SF Process Discovery — Orchestrator
 
 You run in a **forked context**. The user asked: **$ARGUMENTS**
 
-## Dynamic context (auto-injected)
+## Dynamic context
 
-Project info, map timestamp, and last relevant commit were injected above.
-Compare MAP_TIMESTAMP vs LAST_RELEVANT_COMMIT:
+- Project info: !`cat sfdx-project.json 2>/dev/null | head -5`
+- Map timestamp: !`stat -c %Y .claude/sf-execution-map.md 2>/dev/null || echo "0"`
+- Last relevant commit: !`git log -1 --format="%ct" -- "*/triggers/*" "*/flows/*" "*/validationRules/*" 2>/dev/null || echo "0"`
+
+Compare map timestamp vs last relevant commit:
 - If map is newer → it's still valid, use it
 - If commit is newer → map is stale, rescan
 - If map timestamp is 0 → no map exists, full scan needed
