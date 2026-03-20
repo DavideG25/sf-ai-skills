@@ -124,11 +124,16 @@ If you modify [the thing asked about]:
 - **Safe**: [same object, different scenario]
 
 ### Test checklist
-- [ ] [What to verify — expected outcome]
+Focus on process/functional tests: scenarios to verify end-to-end behavior, business rules, and edge cases.
+- [ ] [Scenario — given X happens, verify Y is the outcome]
 - [ ] ...
 
+If relevant, also include technical checks (e.g. a specific field is populated, a record is created):
+- [ ] [Technical check — optional]
+
 ### Regression tests
-- [ ] [Existing process to re-verify]
+Existing processes to re-verify after any change in this area:
+- [ ] [Process/behavior that must still work correctly]
 - [ ] ...
 ```
 
