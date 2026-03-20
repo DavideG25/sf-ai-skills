@@ -32,27 +32,19 @@ Alla prima esecuzione rileva automaticamente la struttura dei branch e salva la 
 
 ## Struttura branch attesa
 
-```
-production   ← branch di produzione
-release      ← branch principale (feature partono da qui)
-quality      ← ambiente di test/staging
+La skill riconosce automaticamente tre ruoli nei branch remoti:
 
-feature/TICKET        ← sviluppo
-qualitymerge/TICKET   ← merge verso quality
-hotfix/TICKET         ← fix urgenti da production
-```
+- **BRANCH_MAIN** — branch principale da cui partono le feature (es. `release`, `main`, `develop`)
+- **BRANCH_QUALITY** — ambiente di staging/test (es. `quality`, `staging`, `uat`)
+- **BRANCH_PRODUCTION** — branch di produzione (es. `production`, `prod`, `master`)
+
+I branch di lavoro seguono sempre questi prefissi:
+- `feature/TICKET` — sviluppo
+- `qualitymerge/TICKET` — merge verso quality
+- `hotfix/TICKET` — fix urgenti da production
 
 ## Configurazione
 
-La skill salva automaticamente la configurazione in `.claude/git-workflow-config.md`:
+Alla **prima esecuzione** la skill analizza i branch remoti e inferisce automaticamente la mappatura. Se ambigua, chiede conferma una sola volta.
 
-```
-BRANCH_MAIN=release
-BRANCH_QUALITY=quality
-BRANCH_PRODUCTION=production
-FEATURE_PREFIX=feature
-HOTFIX_PREFIX=hotfix
-QUALITYMERGE_PREFIX=qualitymerge
-```
-
-Modifica questo file se i nomi dei branch cambiano nel progetto.
+La configurazione viene salvata in `.claude/git-workflow-config.md` e riutilizzata silenziosamente nelle esecuzioni successive. Per cambiarla basta modificare quel file.
