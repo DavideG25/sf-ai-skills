@@ -17,6 +17,7 @@ settings.json
 | `sf-apex-testing` | Crea o corregge classi di test Apex in autonomia | `skills/sf-apex-testing/README.md` |
 | `sf-git-workflow` | Gestisce branch e merge in linguaggio naturale | `skills/sf-git-workflow/README.md` |
 | `sf-process-discovery` | Mappa l'execution flow e l'impatto di un evento su un oggetto Salesforce | `skills/sf-process-discovery/README.md` |
+| `sf-class-explorer` | Spiega una classe/trigger/Flow e mappa le dipendenze, produce un documento | `skills/sf-class-explorer/README.md` |
 
 ## Come usare questo repo
 
@@ -36,3 +37,11 @@ Le skills si aggiornano indipendentemente. Sostituisci i file copiati con le ver
 - **Pattern orchestratore + agente**: le skills coordinano agenti read-only che analizzano il codice; solo il runner ha accesso in scrittura
 - **Italiano e inglese**: tutte le skills supportano entrambe le lingue
 - **Apprendimento persistente**: le skills salvano pattern e configurazioni in `.claude/` per migliorare nel tempo
+
+## Roadmap
+
+### In sviluppo
+*(nessuna skill in corso attualmente)*
+
+### Backlog
+- `sf-documentation` — documenta un oggetto Salesforce o un processo di business (sezione tecnica + funzionale, output `.md` / `.docx`)
