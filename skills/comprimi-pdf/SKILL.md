@@ -1,4 +1,3 @@
-cat > sf-ai-skills/comprimi-pdf/SKILL.md << 'EOF'
 ---
 name: comprimi-pdf
 description: >
