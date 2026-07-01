@@ -57,4 +57,3 @@ Usa `present_files` per presentare il file all'utente.
 ### 3. Comunica all'utente
 - Dimensioni prima/dopo
 - Avvertenza sulle firme digitali se il documento ne contiene
-EOF
