@@ -30,7 +30,7 @@ find . -name "$ARGUMENTS.cls" -o -name "$ARGUMENTS.trigger" 2>/dev/null
 find . -name "*$ARGUMENTS*Test*.cls" -o -name "*Test*$ARGUMENTS*.cls" 2>/dev/null
 ```
 
-Read both files. Count copribili lines in the source:
+Read both files. Count lines in the source:
 - Exclude: blank lines, single-line comments (`//`), block comments (`/* */`), class/interface declarations, `{` and `}` alone on a line
 - Count: method bodies, if/else/for/while statements, DML, SOQL, return statements, assignments
 
