@@ -1,5 +1,18 @@
-# sf-plan
+---
+name: sf-new-ticket
+description: >
+  Workflow completo per avviare un nuovo ticket Salesforce: crea il branch feature da release,
+  analizza il codice esistente rilevante (pattern da estendere, file coinvolti, dipendenze),
+  scrive un piano tecnico dettagliato in .claude/plans/<TICKET>.md e si ferma per conferma
+  esplicita prima di toccare qualsiasi file di codice. Implementa solo dopo un "vai"/"ok"/"procedi".
+  Usa questa skill ogni volta che l'utente fornisce un numero di ticket Jira (es. CPQ-2236,
+  TGL-895, SFC-1234) insieme alla descrizione di cosa va sviluppato — anche se non dice
+  esplicitamente "crea un piano" o "nuovo ticket". Trigger tipici: "CPQ-2236: aggiungi il campo X",
+  "devo lavorare sul ticket TGL-895 che fa Y", "nuovo ticket ABC-123, mi serve Z",
+  "analizza e pianifica questo ticket".
+---
 
+# sf-plan
 Workflow: analisi tecnica + piano di implementazione per un ticket Salesforce.
 
 ## Quando usare questa skill
