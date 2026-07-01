@@ -1,3 +1,16 @@
+---
+name: sync-skills
+description: >
+  Sincronizza skills, agenti e permessi dal repo GitHub sf-ai-skills nel progetto locale,
+  preservando le customizzazioni non presenti upstream (skills/agenti custom del progetto,
+  permessi custom in settings.json). Esegue git fetch + checkout selettivo di skills/, agents/
+  e settings.json dal branch github/master, poi ripristina ciò che è locale-only.
+  Usa questa skill quando l'utente chiede di aggiornare, sincronizzare o allineare le skill
+  con l'ultima versione del repo sf-ai-skills. Trigger tipici: "sincronizza le skill",
+  "aggiorna le skill dal repo", "sync skills", "porta gli ultimi aggiornamenti delle skill",
+  "allinea gli agenti con github", "c'è una nuova versione delle skill?".
+---
+
 Sincronizza le skills, gli agenti e i permessi dal repo GitHub sf-ai-skills, preservando le customizzazioni locali.
 
 ## Flusso
