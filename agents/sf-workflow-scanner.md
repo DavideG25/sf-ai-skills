@@ -2,7 +2,7 @@
 name: sf-workflow-scanner
 description: Scans Workflow Rules and Duplicate Rules for a specific object and scenario.
 tools: Read, Grep, Glob
-model: sonnet
+model: haiku
 agent: Explore
 ---
 
