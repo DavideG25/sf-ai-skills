@@ -2,7 +2,7 @@
 name: sf-processbuilder-scanner
 description: Scans Process Builder processes for a specific object and scenario.
 tools: Read, Grep, Glob
-model: sonnet
+model: haiku
 agent: Explore
 ---
 
