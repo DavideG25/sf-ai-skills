@@ -2,7 +2,7 @@
 name: sf-approval-scanner
 description: Scans Approval Processes for a specific object and scenario.
 tools: Read, Grep, Glob
-model: sonnet
+model: haiku
 agent: Explore
 ---
 
