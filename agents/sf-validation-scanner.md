@@ -2,7 +2,7 @@
 name: sf-validation-scanner
 description: Scans validation rules for a specific object. Reads formulas to find which block in a scenario.
 tools: Read, Grep, Glob
-model: sonnet
+model: haiku
 agent: Explore
 ---
 
