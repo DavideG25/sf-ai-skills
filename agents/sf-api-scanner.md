@@ -2,7 +2,7 @@
 name: sf-api-scanner
 description: Light scan of a Salesforce project to extract available APIs — public method signatures, custom types, custom objects, and exceptions. Gives a code-writing agent a map of what exists before writing a single line, to avoid basic compilation errors.
 tools: Read, Grep, Glob
-model: sonnet
+model: haiku
 agent: Explore
 ---
 
