@@ -2,7 +2,7 @@
 name: sf-flow-scanner
 description: Scans Salesforce Flows for a specific object and scenario. Parses flow XML for entry conditions.
 tools: Read, Grep, Glob
-model: sonnet
+model: haiku
 agent: Explore
 ---
 
