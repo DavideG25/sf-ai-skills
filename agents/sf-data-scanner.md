@@ -2,7 +2,7 @@
 name: sf-data-scanner
 description: Scans project for test data patterns, TestDataFactory, @TestSetup methods, and org learnings.
 tools: Read, Grep, Glob
-model: sonnet
+model: haiku
 agent: Explore
 ---
 
