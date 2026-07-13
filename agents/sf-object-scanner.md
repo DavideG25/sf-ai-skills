@@ -2,7 +2,7 @@
 name: sf-object-scanner
 description: Reads Salesforce object metadata and returns a structured summary of fields, relationships, record types, and picklist values.
 tools: Read, Grep, Glob
-model: sonnet
+model: haiku
 agent: Explore
 ---
 
