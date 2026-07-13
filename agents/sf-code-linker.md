@@ -2,7 +2,7 @@
 name: sf-code-linker
 description: Takes a class name and line number from a Salesforce debug log, finds the file in the repo, and returns the relevant code context around that point.
 tools: Read, Grep, Glob
-model: sonnet
+model: haiku
 agent: Explore
 ---
 
