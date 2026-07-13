@@ -2,7 +2,7 @@
 name: sf-trigger-scanner
 description: Scans Apex triggers/handlers for a specific object and scenario. Returns only what matches.
 tools: Read, Grep, Glob
-model: sonnet
+model: haiku
 agent: Explore
 ---
 
