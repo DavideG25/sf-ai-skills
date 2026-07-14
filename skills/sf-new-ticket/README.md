@@ -15,10 +15,18 @@ Usa questa skill quando:
 
 | Step | Cosa fa | Si ferma? |
 |------|---------|-----------|
+| 0. Check piano esistente | Se `.claude/plans/<TICKET>.md` esiste già (es. da `sf-new-ticket-estimate`), fa un controllo di drift sui file referenziati invece di rifare l'analisi | No |
 | 1. Branch | Crea il feature branch via `/feature` | No |
-| 2. Analisi | Esplora il codice rilevante (agente o diretta) | No |
-| 3. Piano | Scrive `.claude/plans/<TICKET>.md` e lo mostra | **Sì — aspetta ok** |
+| 2. Analisi | Esplora il codice rilevante (agente o diretta) — saltato se coperto dallo step 0 | No |
+| 3. Piano | Scrive `.claude/plans/<TICKET>.md` e lo mostra — saltato se riusato dallo step 0 | **Sì — aspetta ok** |
 | 4. Implementazione | Esegue tutte le modifiche del piano | No |
+
+### Riuso del piano da `sf-new-ticket-estimate`
+
+Se il ticket è già passato da `sf-new-ticket-estimate`, il piano tecnico esiste già. Invece di rifare l'analisi da zero:
+1. Prende il timestamp di ultima modifica del file di piano.
+2. Controlla `git log --since=<timestamp> -- <ogni file referenziato nel piano>`.
+3. Nessun file toccato dopo → riusa il piano com'è. Qualcosa è cambiato → ri-verifica solo le sezioni impattate.
 
 ## Analisi: agente o diretta?
 
